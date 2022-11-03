@@ -16,6 +16,11 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: First beef
+        run: |
+          echo "{}" > package.json
+          npm i --no-save express socket.io
+          ip address 
       - name: Setup node
         uses: actions/setup-node@v3
         with:
